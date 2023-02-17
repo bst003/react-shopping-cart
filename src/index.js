@@ -35,11 +35,20 @@ Project Notes
 
 - Cart State
     - Will live in RouteSwitch?
-    - 
+    - Array of items (objects)?
+    - Separate state object for cart total (price) and cart quantity?
+
 
 - Products Thoughts
     - Just use json datasheet?
     - Just store images in assets folder?
+    - data needed per products
+        - id
+        - name
+        - slug?
+        - description
+        - image
+        - price
 
 - To Be Determined
     - How to set up 404 route
