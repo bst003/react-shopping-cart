@@ -9,6 +9,10 @@ import reportWebVitals from "./reportWebVitals";
 Project Notes
 
 - Routes Needed
+    - Home
+    - Shop
+    - Single Product (dynamic route)
+    - Cart
 
 - Components Needed
 
