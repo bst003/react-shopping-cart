@@ -2,7 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 
+// import bottle from "./assets/img/quokka-storm-abstract-garden-thumb.jpg";
+
 /*
+
 
 Project Notes
 
@@ -37,6 +40,7 @@ Project Notes
     - Will live in RouteSwitch?
     - Array of items (objects)?
     - Separate state object for cart total (price) and cart quantity?
+    - Store in localstorage
 
 
 - Products Thoughts
@@ -47,6 +51,7 @@ Project Notes
         - name
         - slug?
         - description
+        - thumbnail
         - image
         - price
 
@@ -57,7 +62,12 @@ Project Notes
 */
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<React.StrictMode>test</React.StrictMode>);
+root.render(
+    <React.StrictMode>
+        test
+        {/* <img src={bottle} /> */}
+    </React.StrictMode>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
