@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 
+import RouteSwitch from "./RouteSwitch";
+
 // import bottle from "./assets/img/quokka-storm-abstract-garden-thumb.jpg";
 
 /*
@@ -51,7 +53,6 @@ Project Notes
         - name
         - slug?
         - description
-        - thumbnail
         - image
         - price
 
@@ -64,7 +65,7 @@ Project Notes
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        test
+        <RouteSwitch />
         {/* <img src={bottle} /> */}
     </React.StrictMode>
 );
