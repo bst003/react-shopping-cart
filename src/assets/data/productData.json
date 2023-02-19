@@ -3,36 +3,42 @@
         {
             "id": "QS09384",
             "name": "Quokka Storm Blue",
+            "slug": "quokka-storm-blue",
             "price": 30,
             "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. Now in blue."
         },
         {
             "id": "QS09385",
             "name": "Quokka Storm Maroon",
+            "slug": "quokka-storm-maroon",
             "price": 30,
             "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. Now in Maroon."
         },
         {
             "id": "QS09386",
             "name": "Quokka Storm Teal",
+            "slug": "quokka-storm-teal",
             "price": 30,
             "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. Now in Teal."
         },
         {
             "id": "QS09387",
             "name": "Quokka Storm Marble",
+            "slug": "quokka-storm-marble",
             "price": 32,
             "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. Available in Marble for a limited time."
         },
         {
             "id": "QS09388",
             "name": "Quokka Storm Custom",
+            "slug": "quokka-storm-custom",
             "price": 32,
             "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. Available in this custom color for a limited time."
         },
         {
             "id": "QS09389",
             "name": "Quokka Storm Variety Pack",
+            "slug": "quokka-storm-variety-pack",
             "price": 90,
             "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. This variety pack makes a great gift for all the hydro homies in your life."
         }
