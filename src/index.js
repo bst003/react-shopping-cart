@@ -24,7 +24,7 @@ Project Notes
     - MainLayout (working title, used for general site structure as highest level route)
     - Home (home route element)
     - Shop (Shop route element)
-    - SingleProd (Single prod route element)
+    - Product (Single prod route element)
     - Cart (cart route element)
     - HomePageHero (deco only - used on home)
     - SubPageHero (deco only - used on shop, single prod and cart)
@@ -51,7 +51,7 @@ Project Notes
     - data needed per products
         - id
         - name
-        - slug?
+        - slug
         - description
         - image
         - price
