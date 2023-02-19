@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "id": "QS09384",
+            "name": "Quokka Storm Blue",
+            "price": 30,
+            "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. Now in blue."
+        },
+        {
+            "id": "QS09385",
+            "name": "Quokka Storm Maroon",
+            "price": 30,
+            "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. Now in Maroon."
+        },
+        {
+            "id": "QS09386",
+            "name": "Quokka Storm Teal",
+            "price": 30,
+            "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. Now in Teal."
+        },
+        {
+            "id": "QS09387",
+            "name": "Quokka Storm Marble",
+            "price": 32,
+            "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. Available in Marble for a limited time."
+        },
+        {
+            "id": "QS09388",
+            "name": "Quokka Storm Custom",
+            "price": 32,
+            "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. Available in this custom color for a limited time."
+        },
+        {
+            "id": "QS09389",
+            "name": "Quokka Storm Variety Pack",
+            "price": 90,
+            "description": "The new Quokka Storm bottle is made with shatter resistant glass and a bamboo lid. The non-slip silicone cover helps ensure you don't lose your grip. This variety pack makes a great gift for all the hydro homies in your life."
+        }
+    ]
+}
