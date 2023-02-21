@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import RouteSwitch from "./RouteSwitch";
 
+import "./assets/scss/styles.scss";
 import "normalize.css";
 
 // import bottle from "./assets/img/quokka-storm-abstract-garden-thumb.jpg";
@@ -21,6 +22,8 @@ Project Notes
 - Components Needed
     - RouteSwitch
     - Header
+    - Nav
+    - CartButtton
     - Footer
     - MainLayout (working title, used for general site structure as highest level route)
     - Home (home route element)
