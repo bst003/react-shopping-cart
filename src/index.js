@@ -25,6 +25,7 @@ Project Notes
     - Home (home route element)
     - Shop (Shop route element)
     - Product (Single prod route element)
+        - Have conditional check if product exists, if not then run error
     - Cart (cart route element)
     - HomePageHero (deco only - used on home)
     - SubPageHero (deco only - used on shop, single prod and cart)

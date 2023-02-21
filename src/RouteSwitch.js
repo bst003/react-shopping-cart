@@ -6,27 +6,14 @@ import Cart from "./views/Cart";
 import NotFound from "./views/NotFound";
 import MainLayout from "./MainLayout";
 
-import productData from "./assets/data/productData.json";
-
 const RouteSwitch = () => {
-    console.log(productData);
     return (
         <BrowserRouter>
             <Routes>
                 <Route element={<MainLayout />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/shop" element={<Shop />} />
-                    <Route
-                        path="/shop/:slug"
-                        loader={({ params }) => {
-                            return productData.filter((product) => {
-                                console.log(product);
-                                return product.slug === params.slug;
-                            });
-                        }}
-                        element={<Product />}
-                        errorElement={<NotFound />}
-                    />
+                    <Route path="/shop/:slug" element={<Product />} />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
