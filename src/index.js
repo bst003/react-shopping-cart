@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-
 import RouteSwitch from "./RouteSwitch";
+
+import "normalize.css";
 
 // import bottle from "./assets/img/quokka-storm-abstract-garden-thumb.jpg";
 
