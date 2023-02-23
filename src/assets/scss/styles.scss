@@ -1,8 +1,31 @@
 :root{
-    --teal: #0BECCE;
-    --darkBlue: #133275;
-    --siteHorizonalPadding: 20px;
+    --offWhite: #fefefe;
+    --offBlack: #111111;
+    --brandTeal: #0BECCE;
+    --brandDarkBlue: #133275;
 
     --primaryFont: 'Roboto', sans-serif;
     --secondaryFont: 'Tilt Warp', cursive;
+
+    --siteHorizonalPadding: 20px;
+    --siteContentWidth: 1200px;
+    --siteContentWidthNarrow: 1000px;
+}
+
+body{
+    color: var(--offBlack);
+    font-family: var(--primaryFont);
+    line-height: 1.4;
+    height: 100%;
+}
+
+.wrap{
+    margin: 0 auto;
+    max-width: var(--siteContentWidth);
+    width: 100%;
+
+    &.narrow{
+        max-width: var(--siteContentWidthNarrow);
+    }
+
 }

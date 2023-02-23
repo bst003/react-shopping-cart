@@ -20,7 +20,7 @@ const Header = (props) => {
                 </nav>
 
                 <div className="site-cart-link">
-                    <Link>
+                    <Link to="/cart">
                         <i className="fas fa-shopping-cart"></i>
                     </Link>
                 </div>
