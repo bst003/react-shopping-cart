@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Nav.scss";
 
+/*
+Need to Do
+    Add listener to site mobile open and site mobile close
+    check if unmount runs when view changes
+*/
+
 const Nav = () => {
     return (
         <div className="site-nav-contain">
