@@ -12,6 +12,10 @@
     --siteContentWidthNarrow: 1000px;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     color: var(--offBlack);
     font-family: var(--primaryFont);

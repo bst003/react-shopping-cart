@@ -1,7 +1,7 @@
 .site-header{
     padding: 10px var(--siteHorizonalPadding);
     background-color: var(--brandDarkBlue);
-    color: #fff;
+    color: var(--offWhite);
 
     &__inner{
         display: flex;
@@ -17,36 +17,28 @@
         font-size: 36px;
     }
 
-    .site-nav{
-        margin-left: auto;
-        margin-right: 28px;
-
-        ul{
-            display: flex;
-            gap: 28px;
-            padding: 0px;
-            margin: 0px;
-            list-style-type: none;
-        }
-
-        li{
-
-        }
-
+    .site-cart-link{
+        padding: 12px;
+        font-size: 22px;
     }
 
     a{
         display: block;
-        padding: 10px 0px;
-        color: #fff;
-        font-size: 18px;
-        font-weight: 700;
+        color: var(--offWhite);
         text-decoration: none;
         transition: color 0.3s ease-in;
 
-        &:hover,
-        &:focus{
+        &:hover{
             color: var(--brandTeal);
+        }
+
+    }
+
+
+    @media all and (max-width: 768px) {
+
+        .site-logo{
+            font-size: 26px;
         }
 
     }

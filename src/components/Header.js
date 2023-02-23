@@ -1,5 +1,6 @@
 // Will need to have cart quantity passed down as a prop
 import { Link } from "react-router-dom";
+import Nav from "./Nav";
 import "./Header.scss";
 
 const Header = (props) => {
@@ -8,16 +9,7 @@ const Header = (props) => {
             <div className="site-header__inner">
                 <div className="site-logo">HydroHomies</div>
 
-                <nav className="site-nav">
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/shop">Shop</Link>
-                        </li>
-                    </ul>
-                </nav>
+                <Nav />
 
                 <div className="site-cart-link">
                     <Link to="/cart">
