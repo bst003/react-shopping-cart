@@ -1,3 +1,6 @@
+// Variables
+////////////////////////////////////////////////
+
 :root{
     --offWhite: #fefefe;
     --offBlack: #111111;
@@ -11,6 +14,9 @@
     --siteContentWidth: 1200px;
     --siteContentWidthNarrow: 1000px;
 }
+
+// Site Base
+////////////////////////////////////////////////
 
 *{
     box-sizing: border-box;
@@ -46,4 +52,12 @@ body{
         max-width: var(--siteContentWidthNarrow);
     }
 
+}
+
+// Base Typography
+////////////////////////////////////////////////
+
+p{
+    font-family: var(--primaryFont);
+    font-size: 18px;
 }
