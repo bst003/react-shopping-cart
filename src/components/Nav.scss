@@ -44,10 +44,17 @@
             position: fixed;
             top: 0;
             padding: 20px;
-            right: -260px;
+            right: 0px;
             width: 260px;
             height: 100%;
-            background-color: var(--brandDarkBlue);
+            background-color: var(--brandDarkBlue); 
+            transform: translateX(260px);
+            transition: transform 0.3s ease-in;
+
+            &.opened{
+                transform: translateX(0px);
+            }
+
         }
 
         ul{
