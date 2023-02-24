@@ -2,12 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Nav.scss";
 
-/*
-Need to Do
-    Add listener to site mobile open and site mobile close
-    check if unmount runs when view changes
-*/
-
 const Nav = () => {
     const [navState, setNavState] = useState("closed");
 
@@ -37,11 +31,13 @@ const Nav = () => {
         <div className="site-nav-contain">
             <button className="site-nav-mobile-open" type="button">
                 <i className="fa-solid fa-bars"></i>
+                <span className="screen-reader-text">Open Menu</span>
             </button>
 
             <nav className={`site-nav ${navState}`}>
                 <button className="site-nav-mobile-close" type="button">
-                    close
+                    <i className="fas fa-times"></i>
+                    <span className="screen-reader-text">Close Menu</span>
                 </button>
 
                 <ul>
