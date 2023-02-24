@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Nav.scss";
 
 const Nav = () => {
     const [navState, setNavState] = useState("closed");
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        setNavState("closed"); // Close the navigation panel
+    }, [pathname]);
 
     const openMobileNav = () => {
         setNavState("opened");
