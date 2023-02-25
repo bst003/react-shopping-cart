@@ -54,6 +54,14 @@ body{
 
 }
 
+.site-main{
+    &__inner{
+        margin: 0 auto;
+        max-width: var(--siteContentWidth);
+        width: 100%;
+    }
+}
+
 // Base Typography
 ////////////////////////////////////////////////
 
