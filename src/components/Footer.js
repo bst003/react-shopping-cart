@@ -6,11 +6,11 @@ const Footer = () => {
             <div className="site-footer__inner">
                 <p>
                     Site created by{" "}
-                    <a href="https://github.com/bst003" target="_blank">
+                    <a href="https://github.com/bst003" target="_blank" rel="noreferrer">
                         bst003
                     </a>
                     , image credit goes to{" "}
-                    <a href="https://unsplash.com/@quokkabottle" target="_blank">
+                    <a href="https://unsplash.com/@quokkabottle" target="_blank" rel="noreferrer">
                         quokkabottles on Unsplash
                     </a>
                 </p>
