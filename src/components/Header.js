@@ -7,7 +7,9 @@ const Header = (props) => {
     return (
         <header className="site-header">
             <div className="site-header__inner">
-                <div className="site-logo">HydroHomies</div>
+                <div className="site-logo">
+                    <Link to="/cart">HydroHomies</Link>
+                </div>
 
                 <Nav />
 
