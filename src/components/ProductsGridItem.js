@@ -8,8 +8,11 @@ const ProductsGridItem = (props) => {
     return (
         <div className="products-grid__item">
             <img src={require(`../assets/img/${image}`)} alt={name} />
-            <h4>{name}</h4>
-            <p className="price">{price}</p>
+            <h4>
+                {name}
+                {" - "}
+                <span className="price">${price}</span>
+            </h4>
             <div className="btns-contain center">
                 <div className="btn">
                     <Link className="btn__link" to={"/shop/" + slug}>
