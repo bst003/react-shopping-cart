@@ -45,6 +45,7 @@ const ProductsGrid = (props) => {
                     name={product.name}
                     slug={product.slug}
                     price={product.price}
+                    image={product.image}
                 />
             );
         });
