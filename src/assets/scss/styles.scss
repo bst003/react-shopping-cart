@@ -60,6 +60,11 @@ body{
         margin: 0 auto;
         max-width: var(--siteContentWidth);
         width: 100%;
+
+        >*:last-child{
+            margin: 0px 0px 70px;
+        }
+
     }
 }
 
@@ -69,4 +74,12 @@ body{
 p{
     font-family: var(--primaryFont);
     font-size: 18px;
+}
+
+// Base Images
+////////////////////////////////////////////////
+
+img{
+    width: auto;
+    max-width: 100%;
 }

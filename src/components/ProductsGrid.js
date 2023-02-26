@@ -4,7 +4,7 @@ import "./ProductsGrid.scss";
 
 import productData from "../assets/data/productData.json";
 
-const ProductsGrid = (props) => {
+const ProductsGrid = () => {
     const mapProducts = () => {
         console.log(productData.products);
 
@@ -26,9 +26,9 @@ const ProductsGrid = (props) => {
     };
 
     return (
-        <section className="products-grid">
-            Test
-            {mapProducts()}
+        <section className="products-grid-sect">
+            <h2>All Products</h2>
+            <div className="products-grid">{mapProducts()}</div>
         </section>
     );
 };
