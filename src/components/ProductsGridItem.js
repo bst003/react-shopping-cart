@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./ProductsGridItem.scss";
 
 const ProductsGridItem = (props) => {
     const { name, slug, price, image } = props;
