@@ -8,7 +8,7 @@ const Header = (props) => {
         <header className="site-header">
             <div className="site-header__inner">
                 <div className="site-logo">
-                    <Link to="/cart">HydroHomies</Link>
+                    <Link to="/">HydroHomies</Link>
                 </div>
 
                 <Nav />
