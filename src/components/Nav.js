@@ -39,7 +39,18 @@ const Nav = () => {
                 <span className="screen-reader-text">Open Menu</span>
             </button>
 
-            <nav className={`site-nav ${navState}`}>
+            <nav className="site-nav desktop">
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/shop">Shop</Link>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav className={`site-nav mobile ${navState}`}>
                 <button className="site-nav-mobile-close" type="button">
                     <i className="fas fa-times"></i>
                     <span className="screen-reader-text">Close Menu</span>
