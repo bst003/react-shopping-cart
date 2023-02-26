@@ -10,7 +10,13 @@ const ProductsGridItem = (props) => {
             <img src={require(`../assets/img/${image}`)} alt={name} />
             <h4>{name}</h4>
             <p className="price">{price}</p>
-            <Link to={"/shop/" + slug}>View Product</Link>
+            <div className="btns-contain center">
+                <div className="btn">
+                    <Link className="btn__link" to={"/shop/" + slug}>
+                        View Product
+                    </Link>
+                </div>
+            </div>
         </div>
     );
 };

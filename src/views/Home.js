@@ -7,6 +7,7 @@ const Home = (props) => {
             name: "Quokka Storm Maroon",
             slug: "quokka-storm-maroon",
             price: 30,
+            quantity: 1,
         };
 
         updateCart(testObj);
