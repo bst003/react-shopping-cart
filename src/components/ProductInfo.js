@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 
+import productsData from "../assets/data/productData.json";
+
 const ProductInfo = (props) => {
     const { slug } = props;
 
