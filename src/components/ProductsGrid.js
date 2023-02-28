@@ -2,13 +2,13 @@ import React from "react";
 import ProductsGridItem from "./ProductsGridItem";
 import "./ProductsGrid.scss";
 
-import productData from "../assets/data/productData.json";
+import productsData from "../assets/data/productData.json";
 
 const ProductsGrid = () => {
     const mapProducts = () => {
-        console.log(productData.products);
+        console.log(productsData.products);
 
-        const products = productData.products;
+        const products = productsData.products;
 
         const productGridEls = products.map((product) => {
             return (
