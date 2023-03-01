@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ProdCartForm from "./ProdCartForm";
 import "./ProdInfo.scss";
 
 import productsData from "../assets/data/productData.json";
@@ -38,6 +39,7 @@ const ProdInfo = (props) => {
                             <strong>${price}</strong>
                         </p>
                         <p>{description}</p>
+                        <ProdCartForm />
                     </div>
                 </div>
             );

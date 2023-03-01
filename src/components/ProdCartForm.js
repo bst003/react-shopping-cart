@@ -8,10 +8,22 @@ What will this comp need to do?
 
 const ProdCartForm = () => {
     return (
-        <form className="product-info-form">
+        <form className="product-cart-form">
             <div className="field-contain">
                 <label for="quantity">Quantity</label>
-                <input id="quantity" name="quantity" type="number" min="0" max="20" />
+                <input
+                    id="quantity"
+                    name="quantity"
+                    type="number"
+                    min="1"
+                    max="20"
+                    defaultValue="1"
+                />
+            </div>
+            <div className="form-submit btn">
+                <button className="btn__link" type="submit">
+                    Add to Cart
+                </button>
             </div>
         </form>
     );
