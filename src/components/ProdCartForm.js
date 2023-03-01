@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 /*
 What will this comp need to do?
     Push num of products and prod data to cart
+        OnSubmit check quanity
+        Will need to pass prod data into obj
     Display Message when added to cart
 */
 
