@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import ProductInfo from "../components/ProductInfo";
+import ProdInfo from "../components/ProdInfo";
 
 const Product = () => {
     const params = useParams();
@@ -7,7 +7,7 @@ const Product = () => {
     return (
         <div>
             <h2>Product</h2>
-            <ProductInfo slug={params.slug} />
+            <ProdInfo slug={params.slug} />
         </div>
     );
 };

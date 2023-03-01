@@ -1,10 +1,10 @@
-import ProductsGrid from "../components/ProductsGrid";
+import ProdsGrid from "../components/ProdsGrid";
 
 const Shop = () => {
     return (
         <div>
             <h2>Shop</h2>
-            <ProductsGrid />
+            <ProdsGrid />
         </div>
     );
 };

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./ProductsGridItem.scss";
+import "./ProdsGridItem.scss";
 
-const ProductsGridItem = (props) => {
+const ProdsGridItem = (props) => {
     const { name, slug, price, image } = props;
 
     return (
@@ -24,4 +24,4 @@ const ProductsGridItem = (props) => {
     );
 };
 
-export default ProductsGridItem;
+export default ProdsGridItem;

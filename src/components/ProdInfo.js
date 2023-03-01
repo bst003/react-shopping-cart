@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./ProductInfo.scss";
+import "./ProdInfo.scss";
 
 import productsData from "../assets/data/productData.json";
 
-const ProductInfo = (props) => {
+const ProdInfo = (props) => {
     const { slug } = props;
 
     const [prodData, setProdData] = useState({});
@@ -49,4 +49,4 @@ const ProductInfo = (props) => {
     return <section className="product-info">{renderProductInfo()}</section>;
 };
 
-export default ProductInfo;
+export default ProdInfo;

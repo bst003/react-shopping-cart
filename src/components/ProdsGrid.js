@@ -1,6 +1,6 @@
 import React from "react";
-import ProductsGridItem from "./ProductsGridItem";
-import "./ProductsGrid.scss";
+import ProdsGridItem from "./ProdsGridItem";
+import "./ProdsGrid.scss";
 
 import productsData from "../assets/data/productData.json";
 
@@ -12,7 +12,7 @@ const ProductsGrid = () => {
 
         const productGridEls = products.map((product) => {
             return (
-                <ProductsGridItem
+                <ProdsGridItem
                     key={product.id}
                     name={product.name}
                     slug={product.slug}
