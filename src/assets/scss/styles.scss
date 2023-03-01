@@ -108,42 +108,54 @@ body{
 // Base Typography
 ////////////////////////////////////////////////
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-    font-family: var(--primaryFont);
-    line-height: 1.2;
+body{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6{
+        font-family: var(--primaryFont);
+        line-height: 1.2;
+    }
+    
+    h1,
+    .h1{
+        margin: 0px;
+        font-size: 48px;
+    }
+    
+    h2,
+    .h2{
+        margin: 10px 0px 20px;
+        font-size: 32px;
+    }
+    
+    h3,
+    .h3{
+        margin: 10px 0px;
+        font-size: 28px;
+    }
+    
+    h4,
+    .h4{
+        margin: 10px 0px;
+        font-size: 24px;
+    }
+    
+    p{
+        margin: 24px 0px;
+        font-family: var(--primaryFont);
+        font-size: 18px;
+    }
 }
 
-h1{
-    margin: 0px;
-    font-size: 48px;
-}
-
-h2{
-    margin: 10px 0px 20px;
-    font-size: 32px;
-}
-
-h3{
-    margin: 10px 0px;
-    font-size: 28px;
-}
-
-h4{
-    margin: 10px 0px;
-    font-size: 24px;
-}
-
-p{
-    margin: 24px 0px;
-    font-family: var(--primaryFont);
-    font-size: 18px;
-}
 
 // Base Images
 ////////////////////////////////////////////////

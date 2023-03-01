@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./ProductInfo.scss";
 
 import productsData from "../assets/data/productData.json";
 
@@ -32,8 +33,10 @@ const ProductInfo = (props) => {
                         <img src={require(`../assets/img/${image}`)} alt={name} />
                     </figure>
                     <div className="produft-info__desc">
-                        <h1>{name}</h1>
-                        {price}
+                        <h1 className="h2">{name}</h1>
+                        <p className="price">
+                            <strong>${price}</strong>
+                        </p>
                         <p>{description}</p>
                     </div>
                 </div>

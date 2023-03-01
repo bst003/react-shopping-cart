@@ -1,0 +1,19 @@
+.product-info{
+
+    &__inner{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5%;
+        row-gap: 32px;
+    }
+
+    figure{
+        margin: 0px;;
+    }
+
+    .price{
+        font-size: 20px;
+        margin-top: 0px;
+    }
+
+}
