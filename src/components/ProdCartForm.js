@@ -6,7 +6,7 @@ What will this comp need to do?
     Display Message when added to cart
 */
 
-const ProdInfoForm = () => {
+const ProdCartForm = () => {
     return (
         <form className="product-info-form">
             <div className="field-contain">
@@ -17,4 +17,4 @@ const ProdInfoForm = () => {
     );
 };
 
-export default ProdInfoForm;
+export default ProdCartForm;
