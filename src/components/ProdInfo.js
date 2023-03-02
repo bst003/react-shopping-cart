@@ -5,7 +5,7 @@ import "./ProdInfo.scss";
 import productsData from "../assets/data/productData.json";
 
 const ProdInfo = (props) => {
-    const { slug } = props;
+    const { updateCart, slug } = props;
 
     const [prodData, setProdData] = useState({});
 
@@ -20,6 +20,14 @@ const ProdInfo = (props) => {
 
         setProdData(currentProduct[0]);
     }, [slug]);
+
+    const passUpdateCart = (cartItem) => {
+        console.log("this is in prod info");
+
+        console.log(cartItem);
+
+        updateCart(cartItem);
+    };
 
     const renderProductInfo = () => {
         let renderEls;
@@ -39,7 +47,12 @@ const ProdInfo = (props) => {
                             <strong>${price}</strong>
                         </p>
                         <p>{description}</p>
-                        <ProdCartForm id={id} name={name} price={price} />
+                        <ProdCartForm
+                            updateCart={passUpdateCart}
+                            id={id}
+                            name={name}
+                            price={price}
+                        />
                     </div>
                 </div>
             );

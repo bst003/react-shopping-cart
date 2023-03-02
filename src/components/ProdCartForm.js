@@ -9,9 +9,9 @@ What will this comp need to do?
 */
 
 const ProdCartForm = (props) => {
-    const { name, id, price } = props;
+    const { updateCart, name, id, price } = props;
 
-    const addToCart = (e) => {
+    const submitItemToCart = (e) => {
         e.preventDefault();
         console.log("add");
 
@@ -25,10 +25,12 @@ const ProdCartForm = (props) => {
         };
 
         console.log(cartItem);
+
+        updateCart(cartItem);
     };
 
     return (
-        <form onSubmit={addToCart} className="product-cart-form">
+        <form onSubmit={submitItemToCart} className="product-cart-form">
             <div className="field-contain">
                 <label htmlFor="quantity">Quantity</label>
                 <input

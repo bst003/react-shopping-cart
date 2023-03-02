@@ -8,7 +8,7 @@ import NotFound from "./views/NotFound";
 import MainLayout from "./MainLayout";
 
 const RouteSwitch = () => {
-    const [cart, setCart] = useState([0]);
+    const [cart, setCart] = useState([]);
 
     const updateCart = (itemObj) => {
         setCart([itemObj]);
@@ -25,7 +25,10 @@ const RouteSwitch = () => {
                 <Route element={<MainLayout />}>
                     <Route path="/" element={<Home updateCart={updateCart} />} />
                     <Route path="/shop" element={<Shop />} />
-                    <Route path="/shop/:slug" element={<Product />} />
+                    <Route
+                        path="/shop/:slug"
+                        element={<Product cart={cart} updateCart={updateCart} />}
+                    />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
