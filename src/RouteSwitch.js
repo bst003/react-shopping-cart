@@ -11,6 +11,12 @@ const RouteSwitch = () => {
     const [cart, setCart] = useState([]);
 
     const updateCart = (itemObj) => {
+        /*
+        Account for:
+            Adding another of an item in cart
+            adding new item to cart
+            Comsider renaming to addToCart?
+        */
         setCart([itemObj]);
         console.log("cart updated");
     };
