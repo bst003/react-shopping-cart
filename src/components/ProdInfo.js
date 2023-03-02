@@ -39,7 +39,7 @@ const ProdInfo = (props) => {
                             <strong>${price}</strong>
                         </p>
                         <p>{description}</p>
-                        <ProdCartForm />
+                        <ProdCartForm id={id} name={name} price={price} />
                     </div>
                 </div>
             );

@@ -8,11 +8,29 @@ What will this comp need to do?
     Display Message when added to cart
 */
 
-const ProdCartForm = () => {
+const ProdCartForm = (props) => {
+    const { name, id, price } = props;
+
+    const addToCart = (e) => {
+        e.preventDefault();
+        console.log("add");
+
+        const itemQuantity = Number(document.querySelector("#quantity").value);
+
+        const cartItem = {
+            name,
+            id,
+            price,
+            quantity: itemQuantity,
+        };
+
+        console.log(cartItem);
+    };
+
     return (
-        <form className="product-cart-form">
+        <form onSubmit={addToCart} className="product-cart-form">
             <div className="field-contain">
-                <label for="quantity">Quantity</label>
+                <label htmlFor="quantity">Quantity</label>
                 <input
                     id="quantity"
                     name="quantity"
