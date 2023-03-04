@@ -10,7 +10,7 @@ import MainLayout from "./MainLayout";
 const RouteSwitch = () => {
     const [cart, setCart] = useState([]);
 
-    const updateCart = (itemObj) => {
+    const addToCart = (itemObj) => {
         /*
         Account for:
             Adding another of an item in cart
@@ -29,11 +29,11 @@ const RouteSwitch = () => {
         <BrowserRouter>
             <Routes>
                 <Route element={<MainLayout />}>
-                    <Route path="/" element={<Home updateCart={updateCart} />} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/shop" element={<Shop />} />
                     <Route
                         path="/shop/:slug"
-                        element={<Product cart={cart} updateCart={updateCart} />}
+                        element={<Product cart={cart} addToCart={addToCart} />}
                     />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="*" element={<NotFound />} />

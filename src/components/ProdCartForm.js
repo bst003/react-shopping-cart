@@ -9,7 +9,7 @@ What will this comp need to do?
 */
 
 const ProdCartForm = (props) => {
-    const { updateCart, name, id, price } = props;
+    const { addToCart, name, id, price } = props;
 
     const submitItemToCart = (e) => {
         e.preventDefault();
@@ -26,7 +26,7 @@ const ProdCartForm = (props) => {
 
         console.log(cartItem);
 
-        updateCart(cartItem);
+        addToCart(cartItem);
     };
 
     return (

@@ -2,15 +2,15 @@ import { useParams } from "react-router-dom";
 import ProdInfo from "../components/ProdInfo";
 
 const Product = (props) => {
-    const { cart, updateCart } = props;
+    const { cart, addToCart } = props;
     const params = useParams();
 
-    const passUpdateCart = (cartItem) => {
+    const passAddToCart = (cartItem) => {
         console.log("this is in Product");
 
         console.log(cartItem);
 
-        updateCart(cartItem);
+        addToCart(cartItem);
     };
 
     const displayCart = () => {
@@ -31,7 +31,7 @@ const Product = (props) => {
         <div>
             <h2>Product</h2>
             {displayCart()}
-            <ProdInfo updateCart={passUpdateCart} slug={params.slug} />
+            <ProdInfo addToCart={passAddToCart} slug={params.slug} />
         </div>
     );
 };
