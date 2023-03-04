@@ -10,6 +10,14 @@ import MainLayout from "./MainLayout";
 const RouteSwitch = () => {
     const [cart, setCart] = useState([]);
 
+    const itemIsInCart = (itemObj) => {
+        return cart.find((cartItem) => cartItem.id === itemObj.id);
+    };
+
+    const findMatchingIndex = (itemObj) => {
+        return cart.findIndex((cartItem) => cartItem.id === itemObj.id);
+    };
+
     const addToCart = (itemObj) => {
         /*
         Account for:
@@ -17,7 +25,22 @@ const RouteSwitch = () => {
             adding new item to cart
             Comsider renaming to addToCart?
         */
-        setCart([itemObj]);
+        if (itemIsInCart(itemObj)) {
+            console.log("item in cart already");
+            const updatedItemIndex = findMatchingIndex(itemObj);
+
+            const updatedItemCurrentQuantity = cart[updatedItemIndex].quantity;
+
+            itemObj.quantity = Number(itemObj.quantity) + Number(updatedItemCurrentQuantity);
+
+            setCart([
+                ...cart.slice(0, updatedItemIndex),
+                itemObj,
+                ...cart.slice(updatedItemIndex + 1, cart.length),
+            ]);
+        } else {
+            setCart([...cart, itemObj]);
+        }
         console.log("cart updated");
     };
 
