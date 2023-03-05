@@ -1,10 +1,11 @@
 .home-hero{
+    padding-top: 50px;
+    padding-bottom: 50px;
     min-height: 650px;
     display: flex;
     align-items: center;
 
     &__inner{
-        padding: 50px 0px;
         max-width: 600px;
         width: 100%;
     }
