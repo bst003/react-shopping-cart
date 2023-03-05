@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./ProdCartForm.scss";
 
 /*
 What will this comp need to do?
@@ -31,7 +32,7 @@ const ProdCartForm = (props) => {
 
     return (
         <form onSubmit={submitItemToCart} className="product-cart-form">
-            <div className="field-contain">
+            <div className="field-contain hori">
                 <label htmlFor="quantity">Quantity</label>
                 <input
                     id="quantity"

@@ -165,3 +165,46 @@ img{
     width: auto;
     max-width: 100%;
 }
+
+// Base Forms & Inputs
+////////////////////////////////////////////////
+
+body{
+
+    .field-contain{
+
+        &.hori{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+    }
+
+    label{
+        display: inline-block;
+        font-weight: 600;
+    }
+
+    input[type=text],
+    input[type=number]{
+        height: 40px;
+        padding: 0px 10px;
+        font-family: var(--primaryFont);
+        border: 2px solid #eee;
+        border-radius: 4px;
+        outline: none;
+
+        &:focus,
+        &:focus-within{
+            border-color: var(--brandTeal);
+        }
+
+    }
+
+    .form-submit{
+        margin: 12px 0px 0px;
+    }
+
+}
