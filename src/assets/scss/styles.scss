@@ -73,6 +73,14 @@ body{
 
 }
 
+.full-width{
+    position: relative;
+    z-index: 1;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 0px var(--siteHorizonalPadding);
+}
+
 .btns-contain{
     display: flex;
     flex-wrap: wrap;
