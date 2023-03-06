@@ -6,7 +6,7 @@ const HomeHero = (props) => {
     return (
         <section className="home-hero full-width">
             <div className="wrap">
-                <div class="home-hero__inner">
+                <div className="home-hero__inner">
                     <h1>The Most Dependable Water Bottles</h1>
                     <p>
                         Whether you're headed for an intense run, a relaxing day at the beach or to

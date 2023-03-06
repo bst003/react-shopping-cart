@@ -1,24 +1,37 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
 import "./ProdCartForm.scss";
-
-/*
-What will this comp need to do?
-    Push num of products and prod data to cart
-        OnSubmit check quanity
-        Will need to pass prod data into obj
-    Display Message when added to cart
-*/
 
 const ProdCartForm = (props) => {
     const { addToCart, name, id, price } = props;
+
+    const [submittedQuanity, setSubmittedQuantity] = useState(0);
+    const [showAddAlert, setShowAddAlert] = useState(false);
+
+    const closeAddAlert = () => {
+        setShowAddAlert(false);
+    };
+
+    const renderAddAlert = () => {
+        if (showAddAlert === false) {
+            return "";
+        }
+
+        return (
+            <div className="add-alert">
+                <p>You have added {submittedQuanity + " " + props.name} to your cart.</p>
+                <button onClick={closeAddAlert} type="button" className="close-alert">
+                    close
+                </button>
+            </div>
+        );
+    };
 
     const submitItemToCart = (e) => {
         e.preventDefault();
 
         const form = e.target;
-        const quantityInput = form.querySelector("#quantity");
-        console.log("add");
 
+        const quantityInput = form.querySelector("#quantity");
         const itemQuantity = Number(quantityInput.value);
 
         const cartItem = {
@@ -31,24 +44,14 @@ const ProdCartForm = (props) => {
         console.log(cartItem);
 
         addToCart(cartItem);
+        setSubmittedQuantity(itemQuantity);
+        setShowAddAlert(true);
 
         quantityInput.value = 1;
     };
 
-    const formRef = useRef(null);
-
-    useEffect(() => {
-        const formElement = formRef.current;
-
-        formElement.addEventListener("submit", submitItemToCart);
-
-        return () => {
-            formElement.removeEventListener("submit", submitItemToCart);
-        };
-    });
-
     return (
-        <form ref={formRef} className="product-cart-form">
+        <form onSubmit={submitItemToCart} className="product-cart-form">
             <div className="field-contain hori">
                 <label htmlFor="quantity">Quantity</label>
                 <input
@@ -65,6 +68,7 @@ const ProdCartForm = (props) => {
                     Add to Cart
                 </button>
             </div>
+            {renderAddAlert()}
         </form>
     );
 };
