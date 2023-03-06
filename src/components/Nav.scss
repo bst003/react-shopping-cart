@@ -1,6 +1,6 @@
 .site-nav-contain{
     margin-left: auto;
-    margin-right: 28px;
+    margin-right: 16px;
 
     .site-nav-mobile-open,
     .site-nav-mobile-close{
@@ -25,14 +25,16 @@
     .site-nav.mobile{
         display: none;
         position: fixed;
+        z-index: 10;
         top: 0;
         padding: 20px;
         right: 0px;
         width: 260px;
         height: 100%;
         background-color: var(--brandDarkBlue); 
-        transform: translateX(260px);
+        transform: translateX(270px);
         transition: transform 0.3s ease-in;
+        box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, .6);
 
         &.opened{
             transform: translateX(0px);

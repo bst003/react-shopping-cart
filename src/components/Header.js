@@ -4,6 +4,8 @@ import Nav from "./Nav";
 import "./Header.scss";
 
 const Header = (props) => {
+    const { cartQuantity } = props;
+
     return (
         <header className="site-header">
             <div className="site-header__inner">
@@ -16,6 +18,7 @@ const Header = (props) => {
                 <div className="site-cart-link">
                     <Link to="/cart">
                         <i className="fas fa-shopping-cart"></i>
+                        {cartQuantity > 0 && <span className="cart-quantity">{cartQuantity}</span>}
                     </Link>
                 </div>
             </div>

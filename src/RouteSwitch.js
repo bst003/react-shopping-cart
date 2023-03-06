@@ -9,6 +9,7 @@ import MainLayout from "./MainLayout";
 
 const RouteSwitch = () => {
     const [cart, setCart] = useState([]);
+    const [cartQuantity, setCartQuantity] = useState(0);
 
     const itemIsInCart = (itemObj) => {
         return cart.find((cartItem) => cartItem.id === itemObj.id);
@@ -19,12 +20,6 @@ const RouteSwitch = () => {
     };
 
     const addToCart = (itemObj) => {
-        /*
-        Account for:
-            Adding another of an item in cart
-            adding new item to cart
-            Comsider renaming to addToCart?
-        */
         if (itemIsInCart(itemObj)) {
             console.log("item in cart already");
             const updatedItemIndex = findMatchingIndex(itemObj);
@@ -46,12 +41,24 @@ const RouteSwitch = () => {
 
     useEffect(() => {
         console.log(cart);
+
+        if (cart.length > 0) {
+            const initialValue = 0;
+            const getCartQuantity = cart.reduce(
+                (accumulator, currentItem) => accumulator + currentItem.quantity,
+                initialValue
+            );
+
+            setCartQuantity(getCartQuantity);
+
+            console.log(cartQuantity);
+        }
     }, [cart]);
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route element={<MainLayout />}>
+                <Route element={<MainLayout cartQuantity={cartQuantity} />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/shop" element={<Shop />} />
                     <Route
