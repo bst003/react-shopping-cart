@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./ProdCartForm.scss";
 
 /*
@@ -30,8 +30,20 @@ const ProdCartForm = (props) => {
         addToCart(cartItem);
     };
 
+    const formRef = useRef(null);
+
+    useEffect(() => {
+        const formElement = formRef.current;
+
+        formElement.addEventListener("submit", submitItemToCart);
+
+        return () => {
+            formElement.removeEventListener("submit", submitItemToCart);
+        };
+    });
+
     return (
-        <form onSubmit={submitItemToCart} className="product-cart-form">
+        <form ref={formRef} className="product-cart-form">
             <div className="field-contain hori">
                 <label htmlFor="quantity">Quantity</label>
                 <input
