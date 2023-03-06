@@ -4,16 +4,29 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 5%;
-        row-gap: 32px;
+        row-gap: 28px;
     }
 
     figure{
-        margin: 0px;;
+        margin: 0px;
+    }
+
+    h1.h2{
+        margin-top: 0px;
     }
 
     .price{
         font-size: 20px;
         margin-top: 0px;
+    }
+
+    @media all and (max-width: 639px) {
+
+        &__inner{
+            display: flex;
+            flex-direction: column;
+        }
+
     }
 
 }
