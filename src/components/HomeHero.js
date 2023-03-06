@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./HomeHero.scss";
 
-const HomeHero = (props) => {
+import HomeHeroBg from "../assets/img/home-hero.jpg";
+
+const HomeHero = () => {
     return (
-        <section className="home-hero full-width">
+        <section className="home-hero full-width" style={{ backgroundImage: `url(${HomeHeroBg})` }}>
             <div className="wrap">
                 <div className="home-hero__inner">
                     <h1>The Most Dependable Water Bottles</h1>
