@@ -14,9 +14,12 @@ const ProdCartForm = (props) => {
 
     const submitItemToCart = (e) => {
         e.preventDefault();
+
+        const form = e.target;
+        const quantityInput = form.querySelector("#quantity");
         console.log("add");
 
-        const itemQuantity = Number(document.querySelector("#quantity").value);
+        const itemQuantity = Number(quantityInput.value);
 
         const cartItem = {
             name,
@@ -28,6 +31,8 @@ const ProdCartForm = (props) => {
         console.log(cartItem);
 
         addToCart(cartItem);
+
+        quantityInput.value = 1;
     };
 
     const formRef = useRef(null);
