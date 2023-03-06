@@ -1,3 +1,40 @@
 .product-cart-form{
     margin: 32px 0px 0px;
 }
+
+.add-alert{
+    position: relative;
+    margin: 16px 0px 0px;
+    padding: 14px 50px 14px 20px;
+    background-color: var(--darkWhite);
+    border-radius: 4px;
+
+    p{
+        margin: 0px;
+    }
+
+    .close-alert{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        color: var(--offWhite);
+        font-size: 20px;
+        border: initial;
+        border-radius: 100%;
+        background-color: var(--brandDarkBlue);
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: color 0.3s ease-in;
+
+        &:hover{
+            color: var(--brandTeal);
+        }
+
+    }
+
+}

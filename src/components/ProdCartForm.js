@@ -20,7 +20,7 @@ const ProdCartForm = (props) => {
             <div className="add-alert">
                 <p>You have added {submittedQuanity + " " + props.name} to your cart.</p>
                 <button onClick={closeAddAlert} type="button" className="close-alert">
-                    close
+                    <i className="fas fa-times"></i>
                 </button>
             </div>
         );
