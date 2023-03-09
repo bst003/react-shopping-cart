@@ -1,7 +1,13 @@
+import SubHero from "../components/SubHero";
+
 const NotFound = () => {
     return (
         <div>
-            <h2>404 Not Found</h2>
+            <SubHero title="Page Not Found" />
+            <p>
+                Looks like nothing exists at this address, try using the nav to find what you're
+                looking for.
+            </p>
         </div>
     );
 };
