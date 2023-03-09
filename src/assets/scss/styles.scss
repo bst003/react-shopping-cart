@@ -54,8 +54,12 @@ body{
         max-width: var(--siteContentWidth);
         width: 100%;
 
-        >*:last-child{
-            margin: 0px 0px 70px;
+        > div{
+
+            >*:last-child{
+                margin: 0px 0px 80px;
+            }
+
         }
 
     }
