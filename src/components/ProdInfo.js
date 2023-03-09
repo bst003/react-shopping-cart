@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 import ProdCartForm from "./ProdCartForm";
 import "./ProdInfo.scss";
 
@@ -16,9 +17,17 @@ const ProdInfo = (props) => {
             return product.slug === slug;
         });
 
-        console.log(currentProduct);
+        // console.log(currentProduct);
 
-        setProdData(currentProduct[0]);
+        if (currentProduct.length === 0) {
+            setProdData();
+        } else {
+            setProdData(currentProduct[0]);
+        }
+
+        // console.log(currentProduct);
+
+        // setProdData(currentProduct[0]);
     }, [slug]);
 
     const passAddToCart = (cartItem) => {
@@ -31,7 +40,9 @@ const ProdInfo = (props) => {
 
     const renderProductInfo = () => {
         let renderEls;
-        if (!prodData.hasOwnProperty("name")) {
+        if (!prodData) {
+            renderEls = <Navigate to="/404" />;
+        } else if (!prodData.hasOwnProperty("name")) {
             renderEls = <p>Loading</p>;
         } else {
             const { name, image, price, description, id } = prodData;
