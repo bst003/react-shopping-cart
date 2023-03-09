@@ -1,9 +1,10 @@
+import SubHero from "../components/SubHero";
 import ProdsGrid from "../components/ProdsGrid";
 
 const Shop = () => {
     return (
         <div>
-            <h2>Shop</h2>
+            <SubHero title="Shop" />
             <ProdsGrid />
         </div>
     );

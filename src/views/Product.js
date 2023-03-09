@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import SubHero from "../components/SubHero";
 import ProdInfo from "../components/ProdInfo";
 
 const Product = (props) => {
@@ -29,7 +30,7 @@ const Product = (props) => {
 
     return (
         <div>
-            <h2>Product</h2>
+            <SubHero title="Shop" useH2="true" />
             {displayCart()}
             <ProdInfo addToCart={passAddToCart} slug={params.slug} />
         </div>

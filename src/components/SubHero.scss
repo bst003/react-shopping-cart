@@ -1,0 +1,21 @@
+.sub-hero{
+    display: flex;
+    align-items: center;
+    min-height: 180px;
+    margin-bottom: 80px;
+    background-color: var(--brandTealDarkest);
+
+    &__inner{
+        padding: 40px 0px;
+    }
+    
+    .title{
+        margin: 0px;
+        color: var(--offWhite);
+    }
+
+    @media all and (max-width: 768px) {
+        min-height: 140px;
+    }
+
+}
