@@ -12,18 +12,21 @@ const ProdCartForm = (props) => {
     };
 
     const renderAddAlert = () => {
+        let renderEls;
         if (showAddAlert === false) {
-            return "";
+            renderEls = "";
+        } else {
+            renderEls = (
+                <div className="add-alert">
+                    <p>You have added {submittedQuanity + " " + props.name} to your cart.</p>
+                    <button onClick={closeAddAlert} type="button" className="close-alert">
+                        <i className="fas fa-times"></i>
+                    </button>
+                </div>
+            );
         }
 
-        return (
-            <div className="add-alert">
-                <p>You have added {submittedQuanity + " " + props.name} to your cart.</p>
-                <button onClick={closeAddAlert} type="button" className="close-alert">
-                    <i className="fas fa-times"></i>
-                </button>
-            </div>
-        );
+        return renderEls;
     };
 
     const submitItemToCart = (e) => {
