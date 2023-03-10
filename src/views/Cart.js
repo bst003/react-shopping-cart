@@ -1,6 +1,10 @@
 import SubHero from "../components/SubHero";
 
-const Cart = () => {
+const Cart = (props) => {
+    const { cartItems } = props;
+
+    const renderCartContents = () => {};
+
     return (
         <div>
             <SubHero title="Cart" />

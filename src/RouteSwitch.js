@@ -65,7 +65,7 @@ const RouteSwitch = () => {
                         path="/shop/:slug"
                         element={<Product cart={cart} addToCart={addToCart} />}
                     />
-                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/cart" element={<Cart cartItems={cart} />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
             </Routes>
