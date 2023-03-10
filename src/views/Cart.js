@@ -1,3 +1,4 @@
+import CartTable from "../components/CartTable";
 import SubHero from "../components/SubHero";
 
 const Cart = (props) => {
@@ -7,6 +8,7 @@ const Cart = (props) => {
         let renderEls;
 
         if (cartItems.length > 0) {
+            renderEls = <CartTable cartItems={cartItems} />;
         } else {
             renderEls = <p>There are currently no items in your cart</p>;
         }

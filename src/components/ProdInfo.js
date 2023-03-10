@@ -17,17 +17,11 @@ const ProdInfo = (props) => {
             return product.slug === slug;
         });
 
-        // console.log(currentProduct);
-
         if (currentProduct.length === 0) {
             setProdData();
         } else {
             setProdData(currentProduct[0]);
         }
-
-        // console.log(currentProduct);
-
-        // setProdData(currentProduct[0]);
     }, [slug]);
 
     const passAddToCart = (cartItem) => {

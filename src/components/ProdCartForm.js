@@ -40,7 +40,6 @@ const ProdCartForm = (props) => {
         const cartItem = {
             name,
             id,
-            price,
             quantity: itemQuantity,
         };
 
