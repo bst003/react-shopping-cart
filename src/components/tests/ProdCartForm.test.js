@@ -24,7 +24,6 @@ describe("ProdCartForm component", () => {
         const cartItem = {
             name: "test prod",
             id: "01",
-            price: "30",
             quantity: 1,
         };
 
