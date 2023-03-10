@@ -8,6 +8,7 @@ const CartTable = (props) => {
             return (
                 <CartTableItem
                     key={cartItem.id}
+                    id={cartItem.id}
                     name={cartItem.name}
                     quantity={cartItem.quantity}
                 />
@@ -28,7 +29,7 @@ const CartTable = (props) => {
                         <th>SubTotal</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>{mapCartItems()}</tbody>
             </table>
         </div>
     );
