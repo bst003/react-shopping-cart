@@ -19,30 +19,47 @@ const CartTable = (props) => {
 
     // Run every time the cart is updated
     useEffect(() => {
-        const products = productsData.products;
+        const getCartItemsData = () => {
+            const products = productsData.products;
 
-        const cartItemsDataArr = [];
+            const cartItemsDataArr = [];
 
-        cartItems.forEach((cartItem) => {
-            const currentProductFiltered = products.filter((product) => {
-                return product.id === cartItem.id;
+            cartItems.forEach((cartItem) => {
+                const currentProductFiltered = products.filter((product) => {
+                    return product.id === cartItem.id;
+                });
+
+                const currentProduct = currentProductFiltered[0];
+
+                const currentProductDataObj = {
+                    id: currentProduct.id,
+                    name: currentProduct.name,
+                    price: currentProduct.price,
+                    image: currentProduct.image,
+                    quantity: cartItem.quantity,
+                };
+
+                cartItemsDataArr.push(currentProductDataObj);
             });
 
-            const currentProduct = currentProductFiltered[0];
+            return cartItemsDataArr;
+        };
 
-            const currentProductDataObj = {
-                id: currentProduct.id,
-                name: currentProduct.name,
-                price: currentProduct.price,
-                image: currentProduct.image,
-                quantity: cartItem.quantity,
-            };
-
-            cartItemsDataArr.push(currentProductDataObj);
-        });
-
-        setCartItemsData(cartItemsDataArr);
+        setCartItemsData(getCartItemsData());
     }, [cartItems]);
+
+    // Run every time the cartItemsData is updated
+    useEffect(() => {
+        const calcCartTotal = () => {
+            return cartItemsData.reduce((accumulator, cartItem) => {
+                const currentItemSubTotal = cartItem.quantity * cartItem.price;
+
+                return accumulator + currentItemSubTotal;
+            }, 0);
+        };
+
+        setCartTotal(calcCartTotal());
+    }, [cartItemsData]);
 
     const mapCartItems = () => {
         if (!cartItemsData.length) {
@@ -79,10 +96,10 @@ const CartTable = (props) => {
                 <tbody>{mapCartItems()}</tbody>
                 <tfoot>
                     <tr>
-                        <th scope="row" colspan="3">
+                        <th scope="row" colSpan="3">
                             Total:
                         </th>
-                        <td>test</td>
+                        <td>{cartTotal}</td>
                     </tr>
                 </tfoot>
             </table>
