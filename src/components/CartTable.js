@@ -15,6 +15,7 @@ const CartTable = (props) => {
     const { cartItems } = props;
 
     const [cartItemsData, setCartItemsData] = useState([]);
+    const [cartTotal, setCartTotal] = useState(0);
 
     // Run every time the cart is updated
     useEffect(() => {
@@ -76,6 +77,14 @@ const CartTable = (props) => {
                     </tr>
                 </thead>
                 <tbody>{mapCartItems()}</tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">
+                            Total:
+                        </th>
+                        <td>test</td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     );
