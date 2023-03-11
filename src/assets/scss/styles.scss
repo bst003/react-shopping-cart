@@ -33,9 +33,20 @@ body{
     height: 100%;
 }
 
+#root{
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+}
+
 .site-main{
     padding: 0px var(--siteHorizonalPadding);
     overflow: hidden;
+    flex: 1;
     &__inner{
         margin: 0 auto;
         max-width: var(--siteContentWidth);
