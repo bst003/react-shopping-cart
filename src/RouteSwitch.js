@@ -50,8 +50,6 @@ const RouteSwitch = () => {
             );
 
             setCartQuantity(getCartQuantity);
-
-            console.log(cartQuantity);
         }
     }, [cart]);
 
