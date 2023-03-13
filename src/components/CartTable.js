@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CartTableItem from "./CartTableItem";
+import "./CartTable.scss";
 
 import productsData from "../assets/data/productData.json";
 
@@ -96,6 +97,7 @@ const CartTable = (props) => {
             <table className="cart-table">
                 <thead>
                     <tr>
+                        <th colSpan="2"></th>
                         <th>Product</th>
                         <th>Price</th>
                         <th>Quantity</th>
@@ -105,7 +107,7 @@ const CartTable = (props) => {
                 <tbody>{mapCartItems()}</tbody>
                 <tfoot>
                     <tr>
-                        <th scope="row" colSpan="3">
+                        <th scope="row" colSpan="5">
                             Total:
                         </th>
                         <td>{cartTotal}</td>

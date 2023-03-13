@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import "./CartTableItem.scss";
 
 const CartTableItem = (props) => {
-    const { id, price, name, quantity, updateCartItem } = props;
+    const { id, image, price, name, quantity, updateCartItem } = props;
 
     const [editing, setEditing] = useState(false);
 
@@ -13,7 +14,7 @@ const CartTableItem = (props) => {
         e.preventDefault();
         console.log("submit update cart");
 
-        const updatedQuantity = e.target.querySelector("#quantity").value;
+        const updatedQuantity = Number(e.target.querySelector("#quantity").value);
 
         const cartItem = {
             name,
@@ -63,7 +64,15 @@ const CartTableItem = (props) => {
     };
 
     return (
-        <tr key={id} className="cart-table-contain">
+        <tr key={id} className="cart-table-item">
+            <td>
+                <button className="edit-cart" type="button">
+                    Remove
+                </button>
+            </td>
+            <td>
+                <img className="cart-thumb" src={require(`../assets/img/${image}`)} alt={name} />
+            </td>
             <td>{name}</td>
             <td>{price}</td>
             <td>{renderQuantityContents()}</td>
