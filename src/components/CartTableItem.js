@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const CartTableItem = (props) => {
-    const { id, price, name, quantity } = props;
+    const { id, price, name, quantity, updateCartItem } = props;
 
     const [editing, setEditing] = useState(false);
 
@@ -9,11 +9,27 @@ const CartTableItem = (props) => {
         setEditing(true);
     };
 
+    const submitUpdateToCart = (e) => {
+        e.preventDefault();
+        console.log("submit update cart");
+
+        const updatedQuantity = e.target.querySelector("#quantity").value;
+
+        const cartItem = {
+            name,
+            id,
+            quantity: updatedQuantity,
+        };
+
+        setEditing(false);
+        updateCartItem(cartItem);
+    };
+
     const renderQuantityContents = () => {
         let renderEls;
         if (editing) {
             renderEls = (
-                <form className="cart-update-quantity">
+                <form onSubmit={submitUpdateToCart} className="cart-update-quantity">
                     <div className="field-contain hori">
                         <label htmlFor="quantity">Quantity</label>
                         <input

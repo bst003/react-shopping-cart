@@ -39,6 +39,18 @@ const RouteSwitch = () => {
         console.log("cart updated");
     };
 
+    const updateCartItem = (itemObj) => {
+        console.log(itemObj);
+
+        const updatedItemIndex = findMatchingIndex(itemObj);
+
+        setCart([
+            ...cart.slice(0, updatedItemIndex),
+            itemObj,
+            ...cart.slice(updatedItemIndex + 1, cart.length),
+        ]);
+    };
+
     useEffect(() => {
         console.log(cart);
 
@@ -63,7 +75,10 @@ const RouteSwitch = () => {
                         path="/shop/:slug"
                         element={<Product cart={cart} addToCart={addToCart} />}
                     />
-                    <Route path="/cart" element={<Cart cartItems={cart} />} />
+                    <Route
+                        path="/cart"
+                        element={<Cart cartItems={cart} updateCartItem={updateCartItem} />}
+                    />
                     <Route path="*" element={<NotFound />} />
                 </Route>
             </Routes>

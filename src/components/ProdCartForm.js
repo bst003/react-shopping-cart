@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ProdCartForm.scss";
 
 const ProdCartForm = (props) => {
-    const { addToCart, name, id, price } = props;
+    const { addToCart, name, id } = props;
 
     const [submittedQuanity, setSubmittedQuantity] = useState(0);
     const [showAddAlert, setShowAddAlert] = useState(false);

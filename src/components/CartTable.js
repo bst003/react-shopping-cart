@@ -12,7 +12,15 @@ TODO
 */
 
 const CartTable = (props) => {
-    const { cartItems } = props;
+    const { cartItems, updateCartItem } = props;
+
+    const passUpdateCartItem = (cartItem) => {
+        console.log("this is in CartTable");
+
+        console.log(cartItem);
+
+        updateCartItem(cartItem);
+    };
 
     const [cartItemsData, setCartItemsData] = useState([]);
     const [cartTotal, setCartTotal] = useState(0);
@@ -75,6 +83,7 @@ const CartTable = (props) => {
                     quantity={cartItem.quantity}
                     price={cartItem.price}
                     image={cartItem.image}
+                    updateCartItem={passUpdateCartItem}
                 />
             );
         });
