@@ -6,8 +6,48 @@
     }
 
     td{
+        padding: 8px;
         border-bottom: 1px solid #e1e1e1;
         text-align: center;
+        font-size: 18px;
+    }
+
+
+    .icon-btn{
+        display: inline-flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        border: initial;
+        color: var(--offWhite);
+        border-radius: 4px;
+        background-color: var(--brandTealDark);
+        height: 35px;
+        width: 35px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in;
+
+        &:hover{
+            background-color: var(--brandTealDarkest);
+        }
+
+        &.edit-cart{
+            margin-left: 5px;
+        }
+    }
+    
+    .cart-update-quantity{
+
+        .field-contain{
+            flex-direction: column;
+
+            label{
+                text-align: left;
+            }
+
+        }
+
     }
 
 }

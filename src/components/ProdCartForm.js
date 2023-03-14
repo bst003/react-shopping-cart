@@ -54,7 +54,7 @@ const ProdCartForm = (props) => {
 
     return (
         <form onSubmit={submitItemToCart} className="product-cart-form">
-            <div className="field-contain hori">
+            <div className="field-contain">
                 <label htmlFor="quantity">Quantity</label>
                 <input
                     id="quantity"

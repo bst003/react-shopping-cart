@@ -42,7 +42,7 @@ const CartTableItem = (props) => {
         if (editing) {
             renderEls = (
                 <form onSubmit={submitUpdateToCart} className="cart-update-quantity">
-                    <div className="field-contain hori">
+                    <div className="field-contain">
                         <label htmlFor="quantity">Quantity</label>
                         <input
                             id="quantity"
@@ -64,8 +64,12 @@ const CartTableItem = (props) => {
             renderEls = (
                 <div>
                     {quantity}
-                    <button onClick={triggerEditQuantity} className="edit-cart" type="button">
-                        Edit
+                    <button
+                        onClick={triggerEditQuantity}
+                        className="edit-cart icon-btn"
+                        type="button"
+                    >
+                        <i className="fa-solid fa-pen-to-square"></i>
                     </button>
                 </div>
             );
@@ -77,8 +81,8 @@ const CartTableItem = (props) => {
     return (
         <tr key={id} className="cart-table-item">
             <td>
-                <button onClick={triggerDeleteToCart} className="edit-cart" type="button">
-                    Remove
+                <button onClick={triggerDeleteToCart} className="edit-cart icon-btn" type="button">
+                    <i className="fas fa-times"></i>
                 </button>
             </td>
             <td>
