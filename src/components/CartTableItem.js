@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./CartTableItem.scss";
 
 const CartTableItem = (props) => {
-    const { id, image, price, name, quantity, deleteCartItem, updateCartItem } = props;
+    const { id, image, price, name, slug, quantity, deleteCartItem, updateCartItem } = props;
 
     const [editing, setEditing] = useState(false);
 
@@ -88,10 +89,14 @@ const CartTableItem = (props) => {
             <td>
                 <img className="cart-thumb" src={require(`../assets/img/${image}`)} alt={name} />
             </td>
-            <td>{name}</td>
-            <td>{"$" + price}</td>
-            <td className="quantity-cell">{renderQuantityContents()}</td>
-            <td>{"$" + price * quantity}</td>
+            <td data-title="Name">
+                <Link to={"/shop/" + slug}>{name}</Link>
+            </td>
+            <td data-title="Price">{"$" + price}</td>
+            <td data-title="Quantity" className="quantity-cell">
+                {renderQuantityContents()}
+            </td>
+            <td data-title="Subtotal">{"$" + price * quantity}</td>
         </tr>
     );
 };

@@ -53,4 +53,24 @@
 
     }
 
+    @media all and (max-width: 639px) {
+        width: 100%;
+
+        td{
+            display: block;
+            width: 100%;
+
+            &.quantity-cell{
+                width: 100%;
+            }
+
+            &::after{
+                content: "";
+                display: block;
+                width: 100%;
+            }
+
+        }
+    }
+
 }

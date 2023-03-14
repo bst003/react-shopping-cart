@@ -89,6 +89,7 @@ const CartTable = (props) => {
                     key={cartItem.id}
                     id={cartItem.id}
                     name={cartItem.name}
+                    slug={cartItem.slug}
                     quantity={cartItem.quantity}
                     price={cartItem.price}
                     image={cartItem.image}

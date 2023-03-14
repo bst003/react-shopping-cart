@@ -22,4 +22,16 @@
             font-size: 18px;
         }
     }
+
+    @media all and (max-width: 639px) {
+        display: block;
+
+        thead{
+            display: none;
+        }
+
+        tbody{
+            display: block;
+        }
+    }
 }
