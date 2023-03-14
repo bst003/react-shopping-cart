@@ -1,0 +1,23 @@
+.cart-table{
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    border-collapse: separate;
+    border-spacing: 0px;
+    overflow: hidden;
+
+    thead{
+        th{
+            padding: 8px;
+            border-bottom: 1px solid #e1e1e1;
+        }
+    }
+
+    tfoot{
+        th,
+        td{
+            padding: 8px;
+            text-align: center;
+        }
+    }
+}

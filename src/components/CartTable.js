@@ -116,9 +116,8 @@ const CartTable = (props) => {
                 <tbody>{mapCartItems()}</tbody>
                 <tfoot>
                     <tr>
-                        <th scope="row" colSpan="5">
-                            Total:
-                        </th>
+                        <td colSpan="4"></td>
+                        <th scope="row">Total:</th>
                         <td>{cartTotal}</td>
                     </tr>
                 </tfoot>
