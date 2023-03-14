@@ -118,7 +118,7 @@ const CartTable = (props) => {
                     <tr>
                         <td colSpan="4"></td>
                         <th scope="row">Total:</th>
-                        <td>{cartTotal}</td>
+                        <td>{"$" + cartTotal}</td>
                     </tr>
                 </tfoot>
             </table>

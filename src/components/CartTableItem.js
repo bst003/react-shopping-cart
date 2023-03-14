@@ -89,9 +89,9 @@ const CartTableItem = (props) => {
                 <img className="cart-thumb" src={require(`../assets/img/${image}`)} alt={name} />
             </td>
             <td>{name}</td>
-            <td>{price}</td>
-            <td>{renderQuantityContents()}</td>
-            <td>{price * quantity}</td>
+            <td>{"$" + price}</td>
+            <td className="quantity-cell">{renderQuantityContents()}</td>
+            <td>{"$" + price * quantity}</td>
         </tr>
     );
 };

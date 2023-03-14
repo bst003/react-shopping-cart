@@ -12,6 +12,9 @@
         font-size: 18px;
     }
 
+    .quantity-cell{
+        width: 18%;
+    }
 
     .icon-btn{
         display: inline-flex;
@@ -33,7 +36,7 @@
         }
 
         &.edit-cart{
-            margin-left: 5px;
+            margin-left: 8px;
         }
     }
     
