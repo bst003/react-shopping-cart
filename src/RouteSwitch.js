@@ -39,6 +39,17 @@ const RouteSwitch = () => {
         console.log("cart updated");
     };
 
+    const deleteCartItem = (itemObj) => {
+        console.log(itemObj);
+
+        const updatedItemIndex = findMatchingIndex(itemObj);
+
+        setCart([
+            ...cart.slice(0, updatedItemIndex),
+            ...cart.slice(updatedItemIndex + 1, cart.length),
+        ]);
+    };
+
     const updateCartItem = (itemObj) => {
         console.log(itemObj);
 
@@ -77,7 +88,13 @@ const RouteSwitch = () => {
                     />
                     <Route
                         path="/cart"
-                        element={<Cart cartItems={cart} updateCartItem={updateCartItem} />}
+                        element={
+                            <Cart
+                                cartItems={cart}
+                                updateCartItem={updateCartItem}
+                                deleteCartItem={deleteCartItem}
+                            />
+                        }
                     />
                     <Route path="*" element={<NotFound />} />
                 </Route>

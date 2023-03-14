@@ -2,12 +2,23 @@ import React, { useEffect, useState } from "react";
 import "./CartTableItem.scss";
 
 const CartTableItem = (props) => {
-    const { id, image, price, name, quantity, updateCartItem } = props;
+    const { id, image, price, name, quantity, deleteCartItem, updateCartItem } = props;
 
     const [editing, setEditing] = useState(false);
 
     const triggerEditQuantity = () => {
         setEditing(true);
+    };
+
+    const triggerDeleteToCart = (e) => {
+        e.preventDefault();
+        console.log("submit delete cart");
+
+        const cartItem = {
+            id,
+        };
+
+        deleteCartItem(cartItem);
     };
 
     const submitUpdateToCart = (e) => {
@@ -66,7 +77,7 @@ const CartTableItem = (props) => {
     return (
         <tr key={id} className="cart-table-item">
             <td>
-                <button className="edit-cart" type="button">
+                <button onClick={triggerDeleteToCart} className="edit-cart" type="button">
                     Remove
                 </button>
             </td>

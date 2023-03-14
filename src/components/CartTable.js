@@ -13,7 +13,15 @@ TODO
 */
 
 const CartTable = (props) => {
-    const { cartItems, updateCartItem } = props;
+    const { cartItems, deleteCartItem, updateCartItem } = props;
+
+    const passDeleteCartItem = (cartItem) => {
+        console.log("this is in CartTable");
+
+        console.log(cartItem);
+
+        deleteCartItem(cartItem);
+    };
 
     const passUpdateCartItem = (cartItem) => {
         console.log("this is in CartTable");
@@ -84,6 +92,7 @@ const CartTable = (props) => {
                     quantity={cartItem.quantity}
                     price={cartItem.price}
                     image={cartItem.image}
+                    deleteCartItem={passDeleteCartItem}
                     updateCartItem={passUpdateCartItem}
                 />
             );
