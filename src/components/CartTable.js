@@ -51,6 +51,7 @@ const CartTable = (props) => {
                 const currentProductDataObj = {
                     id: currentProduct.id,
                     name: currentProduct.name,
+                    slug: currentProduct.slug,
                     price: currentProduct.price,
                     image: currentProduct.image,
                     quantity: cartItem.quantity,
