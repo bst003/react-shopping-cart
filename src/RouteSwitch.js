@@ -73,6 +73,8 @@ const RouteSwitch = () => {
             );
 
             setCartQuantity(getCartQuantity);
+        } else {
+            setCartQuantity(0);
         }
     }, [cart]);
 
