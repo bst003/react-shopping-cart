@@ -33,5 +33,24 @@
         tbody{
             display: block;
         }
+
+        tfoot{
+            display: block;
+            width: 100%;
+
+            tr{
+                display: flex;
+                justify-content: space-between;
+                gap: 6px;
+            }
+
+            td{
+
+                &:first-of-type{
+                    display: none;
+                }
+            }
+
+        }
     }
 }

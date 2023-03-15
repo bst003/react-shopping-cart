@@ -81,7 +81,7 @@ const CartTableItem = (props) => {
 
     return (
         <tr key={id} className="cart-table-item">
-            <td>
+            <td className="align-left-mobile">
                 <button onClick={triggerDeleteToCart} className="edit-cart icon-btn" type="button">
                     <i className="fas fa-times"></i>
                 </button>
@@ -89,14 +89,18 @@ const CartTableItem = (props) => {
             <td>
                 <img className="cart-thumb" src={require(`../assets/img/${image}`)} alt={name} />
             </td>
-            <td data-title="Name">
+            <td className="mobile-title" data-title="Name">
                 <Link to={"/shop/" + slug}>{name}</Link>
             </td>
-            <td data-title="Price">{"$" + price}</td>
-            <td data-title="Quantity" className="quantity-cell">
+            <td className="mobile-title" data-title="Price">
+                {"$" + price}
+            </td>
+            <td className="mobile-title quantity-cell" data-title="Quantity">
                 {renderQuantityContents()}
             </td>
-            <td data-title="Subtotal">{"$" + price * quantity}</td>
+            <td className="mobile-title" data-title="Subtotal">
+                {"$" + price * quantity}
+            </td>
         </tr>
     );
 };
