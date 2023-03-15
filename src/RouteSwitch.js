@@ -25,7 +25,6 @@ const RouteSwitch = () => {
 
     const addToCart = (itemObj) => {
         if (itemIsInCart(itemObj)) {
-            console.log("item in cart already");
             const updatedItemIndex = findMatchingIndex(itemObj);
 
             const updatedItemCurrentQuantity = cart[updatedItemIndex].quantity;
@@ -40,7 +39,6 @@ const RouteSwitch = () => {
         } else {
             setCart([...cart, itemObj]);
         }
-        console.log("cart updated");
     };
 
     const deleteCartItem = (itemObj) => {
@@ -55,8 +53,6 @@ const RouteSwitch = () => {
     };
 
     const updateCartItem = (itemObj) => {
-        console.log(itemObj);
-
         const updatedItemIndex = findMatchingIndex(itemObj);
 
         setCart([
@@ -67,10 +63,7 @@ const RouteSwitch = () => {
     };
 
     useEffect(() => {
-        console.log(cart);
-
         localStorage.setItem("cart-contents", JSON.stringify(cart));
-        console.log("set local storage");
 
         if (cart.length > 0) {
             const initialValue = 0;

@@ -13,7 +13,6 @@ const CartTableItem = (props) => {
 
     const triggerDeleteToCart = (e) => {
         e.preventDefault();
-        console.log("submit delete cart");
 
         const cartItem = {
             id,
@@ -24,7 +23,6 @@ const CartTableItem = (props) => {
 
     const submitUpdateToCart = (e) => {
         e.preventDefault();
-        console.log("submit update cart");
 
         const updatedQuantity = Number(e.target.querySelector("#quantity").value);
 

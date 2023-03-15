@@ -25,10 +25,6 @@ const ProdInfo = (props) => {
     }, [slug]);
 
     const passAddToCart = (cartItem) => {
-        console.log("this is in prod info");
-
-        console.log(cartItem);
-
         addToCart(cartItem);
     };
 

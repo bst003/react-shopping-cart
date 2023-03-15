@@ -7,10 +7,6 @@ const Product = (props) => {
     const params = useParams();
 
     const passAddToCart = (cartItem) => {
-        console.log("this is in Product");
-
-        console.log(cartItem);
-
         addToCart(cartItem);
     };
 

@@ -12,16 +12,10 @@ const CartTable = (props) => {
     };
 
     const passDeleteCartItem = (cartItem) => {
-        console.log("this is in CartTable");
-
-        console.log(cartItem);
-
         deleteCartItem(cartItem);
     };
 
     const passUpdateCartItem = (cartItem) => {
-        console.log("this is in CartTable");
-
         console.log(cartItem);
 
         updateCartItem(cartItem);

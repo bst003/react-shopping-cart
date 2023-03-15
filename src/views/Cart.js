@@ -5,18 +5,10 @@ const Cart = (props) => {
     const { cartItems, deleteCartItem, updateCartItem } = props;
 
     const passDeleteCartItem = (cartItem) => {
-        console.log("this is in Cart");
-
-        console.log(cartItem);
-
         deleteCartItem(cartItem);
     };
 
     const passUpdateCartItem = (cartItem) => {
-        console.log("this is in Cart");
-
-        console.log(cartItem);
-
         updateCartItem(cartItem);
     };
 

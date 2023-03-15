@@ -6,8 +6,6 @@ import productsData from "../assets/data/productData.json";
 
 const ProductsGrid = () => {
     const mapProducts = () => {
-        console.log(productsData.products);
-
         const products = productsData.products;
 
         const productGridEls = products.map((product) => {

@@ -43,8 +43,6 @@ const ProdCartForm = (props) => {
             quantity: itemQuantity,
         };
 
-        console.log(cartItem);
-
         addToCart(cartItem);
         setSubmittedQuantity(itemQuantity);
         setShowAddAlert(true);

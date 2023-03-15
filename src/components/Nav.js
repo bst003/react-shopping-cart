@@ -26,7 +26,6 @@ const Nav = () => {
         closeMobileEl.addEventListener("click", closeMobileNav);
 
         return () => {
-            console.log("unmount");
             openMobileEl.removeEventListener("click", openMobileNav);
             closeMobileEl.removeEventListener("click", closeMobileNav);
         };
