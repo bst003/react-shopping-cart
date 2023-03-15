@@ -4,14 +4,6 @@ import "./CartTable.scss";
 
 import productsData from "../assets/data/productData.json";
 
-/*
-TODO
-    Simplify UseEffect for cartItems
-        Separate everything fetching and adding cart item data into own func
-    Add state for cartTotal
-        Update in same useEffec for cartItems
-*/
-
 const CartTable = (props) => {
     const { cartItems, deleteCartItem, updateCartItem } = props;
 

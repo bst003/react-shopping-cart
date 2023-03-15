@@ -7,7 +7,7 @@ const Nav = () => {
     const { pathname } = useLocation();
 
     useEffect(() => {
-        setNavState("closed"); // Close the navigation panel
+        setNavState("closed");
     }, [pathname]);
 
     const openMobileNav = () => {

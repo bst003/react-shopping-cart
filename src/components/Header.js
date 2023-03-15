@@ -1,4 +1,3 @@
-// Will need to have cart quantity passed down as a prop
 import { Link } from "react-router-dom";
 import Nav from "./Nav";
 import "./Header.scss";
