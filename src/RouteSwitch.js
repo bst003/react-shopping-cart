@@ -8,7 +8,11 @@ import NotFound from "./views/NotFound";
 import MainLayout from "./MainLayout";
 
 const RouteSwitch = () => {
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(
+        localStorage.getItem("cart-contents")
+            ? JSON.parse(localStorage.getItem("cart-contents"))
+            : []
+    );
     const [cartQuantity, setCartQuantity] = useState(0);
 
     const itemIsInCart = (itemObj) => {
@@ -64,6 +68,9 @@ const RouteSwitch = () => {
 
     useEffect(() => {
         console.log(cart);
+
+        localStorage.setItem("cart-contents", JSON.stringify(cart));
+        console.log("set local storage");
 
         if (cart.length > 0) {
             const initialValue = 0;
