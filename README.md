@@ -4,4 +4,4 @@
 
 ## Updating Cart
 
-## Fetching Data
+## Retrieving Data
