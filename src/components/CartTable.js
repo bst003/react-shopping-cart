@@ -15,6 +15,10 @@ TODO
 const CartTable = (props) => {
     const { cartItems, deleteCartItem, updateCartItem } = props;
 
+    const triggerCheckoutAlert = () => {
+        alert("Thanks for checking out this React Shop Demo!");
+    };
+
     const passDeleteCartItem = (cartItem) => {
         console.log("this is in CartTable");
 
@@ -124,6 +128,14 @@ const CartTable = (props) => {
                     </tr>
                 </tfoot>
             </table>
+
+            <div className="btns-contain right">
+                <div className="btn">
+                    <button onClick={triggerCheckoutAlert} className="btn__link" type="button">
+                        Continue to Checkout
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };

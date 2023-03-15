@@ -116,6 +116,10 @@ body{
         justify-content: center;
     }
 
+    &.right{
+        justify-content: flex-end;
+    }
+
 }
 
 .btn{
