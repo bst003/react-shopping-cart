@@ -67,6 +67,8 @@ const CartTableItem = (props) => {
                         onClick={triggerEditQuantity}
                         className="edit-cart icon-btn"
                         type="button"
+                        name="edit-cart"
+                        data-testid="edit-cart"
                     >
                         <i className="fa-solid fa-pen-to-square"></i>
                     </button>
@@ -89,7 +91,13 @@ const CartTableItem = (props) => {
                 </button>
             </td>
             <td>
-                <img className="cart-thumb" src={require(`../assets/img/${image}`)} alt={name} />
+                {image && (
+                    <img
+                        className="cart-thumb"
+                        src={require(`../assets/img/${image}`)}
+                        alt={name}
+                    />
+                )}
             </td>
             <td className="mobile-title" data-title="Name">
                 <Link to={"/shop/" + slug}>{name}</Link>
