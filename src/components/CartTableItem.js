@@ -80,7 +80,11 @@ const CartTableItem = (props) => {
     return (
         <tr key={id} className="cart-table-item">
             <td className="align-left-mobile">
-                <button onClick={triggerDeleteToCart} className="edit-cart icon-btn" type="button">
+                <button
+                    onClick={triggerDeleteToCart}
+                    className="delete-cart-item icon-btn"
+                    type="button"
+                >
                     <i className="fas fa-times"></i>
                 </button>
             </td>

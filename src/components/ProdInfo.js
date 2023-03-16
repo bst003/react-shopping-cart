@@ -33,7 +33,7 @@ const ProdInfo = (props) => {
         if (!prodData) {
             renderEls = <Navigate to="/404" />;
         } else if (!prodData.hasOwnProperty("name")) {
-            renderEls = <p>Loading</p>;
+            renderEls = "";
         } else {
             const { name, image, price, description, id } = prodData;
 
