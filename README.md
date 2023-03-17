@@ -2,6 +2,8 @@
 
 This React project was boostrapped with <a href="https://github.com/facebook/create-react-app">Create React App</a> as part of The Odin Project curriculum. The goal of this project was to practice using React Rotuing and Testing capabilities.
 
+View the live project <a href="https://bst003.github.io/react-shopping-cart">here</a>.
+
 ## Routing
 
 Routing is used throughout this project to serve both statis and dynamic routes. All of the routes excluding the Product <code>/shop/:slug</code> are statis routes. The Product route uses the slug of the product to filter data from the json data sheet to populate the page. If the slug does nto correspond with any product data the user is taken to a 404 page.
