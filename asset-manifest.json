@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-shopping-cart/static/css/main.b1974f75.css",
-    "main.js": "/react-shopping-cart/static/js/main.30234afd.js",
+    "main.js": "/react-shopping-cart/static/js/main.f626cb4c.js",
     "static/js/787.d6fe38e8.chunk.js": "/react-shopping-cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/home-hero.jpg": "/react-shopping-cart/static/media/home-hero.e1f369a8363fe8556de9.jpg",
     "static/media/quokka-storm-maroon.jpg": "/react-shopping-cart/static/media/quokka-storm-maroon.0a6609990ec98ae38e64.jpg",
@@ -12,11 +12,11 @@
     "static/media/quokka-storm-variety-pack.jpg": "/react-shopping-cart/static/media/quokka-storm-variety-pack.162bb3b3bfc67168e1c8.jpg",
     "index.html": "/react-shopping-cart/index.html",
     "main.b1974f75.css.map": "/react-shopping-cart/static/css/main.b1974f75.css.map",
-    "main.30234afd.js.map": "/react-shopping-cart/static/js/main.30234afd.js.map",
+    "main.f626cb4c.js.map": "/react-shopping-cart/static/js/main.f626cb4c.js.map",
     "787.d6fe38e8.chunk.js.map": "/react-shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1974f75.css",
-    "static/js/main.30234afd.js"
+    "static/js/main.f626cb4c.js"
   ]
 }
