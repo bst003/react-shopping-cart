@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-shopping-cart/static/css/main.b1974f75.css",
+    "main.js": "/react-shopping-cart/static/js/main.6c5fe6d3.js",
+    "static/js/787.d6fe38e8.chunk.js": "/react-shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/home-hero.jpg": "/react-shopping-cart/static/media/home-hero.e1f369a8363fe8556de9.jpg",
+    "static/media/quokka-storm-maroon.jpg": "/react-shopping-cart/static/media/quokka-storm-maroon.0a6609990ec98ae38e64.jpg",
+    "static/media/quokka-storm-blu.jpg": "/react-shopping-cart/static/media/quokka-storm-blu.3ab529f173b3de250258.jpg",
+    "static/media/quokka-storm-marble.jpg": "/react-shopping-cart/static/media/quokka-storm-marble.7aa6514a2a1c19da1c95.jpg",
+    "static/media/quokka-storm-teal.jpg": "/react-shopping-cart/static/media/quokka-storm-teal.3d5a877043e3f84a7927.jpg",
+    "static/media/quokka-storm.jpg": "/react-shopping-cart/static/media/quokka-storm.a5a9cf5e63ca98e9c6d7.jpg",
+    "static/media/quokka-storm-variety-pack.jpg": "/react-shopping-cart/static/media/quokka-storm-variety-pack.162bb3b3bfc67168e1c8.jpg",
+    "index.html": "/react-shopping-cart/index.html",
+    "main.b1974f75.css.map": "/react-shopping-cart/static/css/main.b1974f75.css.map",
+    "main.6c5fe6d3.js.map": "/react-shopping-cart/static/js/main.6c5fe6d3.js.map",
+    "787.d6fe38e8.chunk.js.map": "/react-shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1974f75.css",
+    "static/js/main.6c5fe6d3.js"
+  ]
+}
