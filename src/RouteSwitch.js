@@ -42,8 +42,6 @@ const RouteSwitch = () => {
     };
 
     const deleteCartItem = (itemObj) => {
-        console.log(itemObj);
-
         const updatedItemIndex = findMatchingIndex(itemObj);
 
         setCart([
