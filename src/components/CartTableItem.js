@@ -68,7 +68,7 @@ const CartTableItem = (props) => {
                         className="edit-cart icon-btn"
                         type="button"
                         name="edit-cart"
-                        data-testid="edit-cart"
+                        data-testid="edit-cart-item"
                     >
                         <i className="fa-solid fa-pen-to-square"></i>
                     </button>
@@ -86,6 +86,7 @@ const CartTableItem = (props) => {
                     onClick={triggerDeleteToCart}
                     className="delete-cart-item icon-btn"
                     type="button"
+                    data-testid="delete-cart-item"
                 >
                     <i className="fas fa-times"></i>
                 </button>
