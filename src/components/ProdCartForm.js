@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./ProdCartForm.scss";
 
 const ProdCartForm = (props) => {
@@ -18,7 +19,10 @@ const ProdCartForm = (props) => {
         } else {
             renderEls = (
                 <div className="add-alert">
-                    <p>You have added {submittedQuanity + " " + props.name} to your cart.</p>
+                    <p>
+                        You have added {submittedQuanity + " " + props.name} to your cart.{" "}
+                        <Link to="/cart">View your cart now.</Link>
+                    </p>
                     <button onClick={closeAddAlert} type="button" className="close-alert">
                         <i className="fas fa-times"></i>
                     </button>
