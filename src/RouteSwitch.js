@@ -77,7 +77,7 @@ const RouteSwitch = () => {
     }, [cart]);
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/react-shopping-cart">
             <Routes>
                 <Route element={<MainLayout cartQuantity={cartQuantity} />}>
                     <Route path="/" element={<Home />} />
