@@ -2,10 +2,14 @@ import CartTable from "../components/CartTable";
 import SubHero from "../components/SubHero";
 
 const Cart = (props) => {
-    const { cartItems, deleteCartItem, updateCartItem } = props;
+    const { cartItems, deleteCartItem, emptyCart, updateCartItem } = props;
 
     const passDeleteCartItem = (cartItem) => {
         deleteCartItem(cartItem);
+    };
+
+    const passEmptyCart = () => {
+        emptyCart();
     };
 
     const passUpdateCartItem = (cartItem) => {
@@ -21,6 +25,7 @@ const Cart = (props) => {
                     cartItems={cartItems}
                     deleteCartItem={passDeleteCartItem}
                     updateCartItem={passUpdateCartItem}
+                    emptyCart={passEmptyCart}
                 />
             );
         } else {

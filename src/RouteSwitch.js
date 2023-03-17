@@ -50,6 +50,10 @@ const RouteSwitch = () => {
         ]);
     };
 
+    const emptyCart = () => {
+        setCart([]);
+    };
+
     const updateCartItem = (itemObj) => {
         const updatedItemIndex = findMatchingIndex(itemObj);
 
@@ -93,6 +97,7 @@ const RouteSwitch = () => {
                                 cartItems={cart}
                                 updateCartItem={updateCartItem}
                                 deleteCartItem={deleteCartItem}
+                                emptyCart={emptyCart}
                             />
                         }
                     />

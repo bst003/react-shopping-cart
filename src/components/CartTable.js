@@ -5,9 +5,10 @@ import "./CartTable.scss";
 import productsData from "../assets/data/productData.json";
 
 const CartTable = (props) => {
-    const { cartItems, deleteCartItem, updateCartItem } = props;
+    const { cartItems, deleteCartItem, emptyCart, updateCartItem } = props;
 
     const triggerCheckoutAlert = () => {
+        emptyCart();
         alert("Thanks for checking out this React Shop Demo!");
     };
 
