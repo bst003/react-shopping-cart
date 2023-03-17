@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 import Home from "./views/Home";
 import Shop from "./views/Shop";
 import Product from "./views/Product";
@@ -82,6 +83,7 @@ const RouteSwitch = () => {
 
     return (
         <BrowserRouter basename="/react-shopping-cart">
+            <ScrollToTop />
             <Routes>
                 <Route element={<MainLayout cartQuantity={cartQuantity} />}>
                     <Route path="/" element={<Home />} />
