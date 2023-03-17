@@ -21,3 +21,5 @@ There are three main methods used to update the cart for this project <code>addT
 The product data for this project is pulled from a local json file and filtered/mapped depending on where it is used. in the ProdsGrid component every product object is mapped over and rendered as a ProdsGridItem element. Other scenarios using this data include the ProdInfo component which inherits the product slug from the Product component and then filters through the product data to return the correct information.
 
 ## Testing
+
+Jest testing was used throughout this project to ensure that elements were appearing on screen at the correct times and to ensure that methods are being called with properly formatted arguments.
